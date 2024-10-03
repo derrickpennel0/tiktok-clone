@@ -1,0 +1,54 @@
+html {
+  scroll-snap-type: y mandatory;
+}
+
+.app {
+  background-color: black;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+.app_vids {
+  position: relative;
+  height: 700px;
+  border-radius: 20px;
+  overflow: scroll;
+  width: 90%;
+  max-width: 500px;
+  scroll-snap-type: y mandatory;
+}
+
+.app_vids::-webkit-scrollbar {
+  width: 0;
+}
+
+/* for edge, IE firefox,  */
+.app_vids {
+  -ms-overflow-style: none;
+  scrollbar-width: 0;
+}
+
+.video_ticker > .ticker {
+  height: fit-content;
+  margin-left: 35px;
+  width: 60%;
+}
+
+.videoFooter_record {
+  animation: spinTheRecord infinite 5s linear;
+  height: 40px;
+  filter: invert(1);
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+}
+
+@keyframes spinTheRecord {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
